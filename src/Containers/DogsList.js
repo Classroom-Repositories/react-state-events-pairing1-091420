@@ -1,25 +1,19 @@
 import React, { Component } from "react";
-import apiResponse from '../api';
+import { apiResponse } from '../api';
 import DogCard from '../Components/DogCard'
 
 class DogsList extends Component {
-  
-  
 
   renderDogs = () => {
-    apiResponse.map((dogObj) => {
-      const dogName = dogObj.name
-      const dogImg = dogObj.img
-      const dogBreed = dogObj.breed
-      const dogId = dogObj.id
-
-    })
+    return apiResponse.map(dogObj => <DogCard name={dogObj.name} img={dogObj.img} breed={dogObj.breed} key={dogObj.id}/>)
   }
-  
+
   render() {
-    return <div className="list">
-      <DogCard name={this.renderDogs.dogName} img={this.renderDogs.dogImg} breed={this.renderDogs.dogBreed} key={this.renderDogs.dogId}/>
-    </div>;
+    return (
+    <div className="list">
+      {this.renderDogs()}
+    </div>
+    )
   }
 }
 
