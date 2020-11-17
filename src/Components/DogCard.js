@@ -1,11 +1,12 @@
 import React from "react";
 
-function DogCard() {
+function DogCard({name, img, breed}) {
+
   return (
     <div className="card">
       <span className="content">
-        <h2 >{/*Dog name goes here*/}</h2>
-        <img alt="" src={""} />
+  <h2 >{name}</h2>
+        <img alt={name} src={img} />
       </span>
       <span className="bark">
         <button>Bark</button>
