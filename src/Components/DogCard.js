@@ -1,7 +1,9 @@
 import React from "react";
-
+function handleButton(){
+  return <h2>"Bark"</h2>
+}
 function DogCard({name, img, breed}) {
-
+  
   return (
     <div className="card">
       <span className="content">
@@ -9,7 +11,7 @@ function DogCard({name, img, breed}) {
         <img alt={name} src={img} />
       </span>
       <span className="bark">
-        <button>Bark</button>
+        <button onClick={handleButton}>Bark</button>
       </span>
     </div>
   );

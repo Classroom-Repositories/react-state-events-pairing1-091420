@@ -3,7 +3,7 @@ import { apiResponse } from '../api';
 import DogCard from '../Components/DogCard'
 
 class DogsList extends Component {
-
+  
   renderDogs = () => {
     return apiResponse.map(dogObj => <DogCard name={dogObj.name} img={dogObj.img} breed={dogObj.breed} key={dogObj.id}/>)
   }
